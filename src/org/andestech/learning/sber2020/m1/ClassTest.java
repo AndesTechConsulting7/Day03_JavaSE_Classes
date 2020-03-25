@@ -8,5 +8,6 @@ public class ClassTest {
    Employee emp1 = new Employee(1222,"Basil","The Wolf");
    emp1.printEmployee();
 
+
     }
 }
