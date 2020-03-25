@@ -19,6 +19,10 @@ public class Employee {
     private String sname;
     private Employee manager= null;
 
+    private static int count = 0;
+    public final static String ORGANISATION = "SBER";
+
+    public static int getCount(){return count;}
     public long getId(){return id;}
     private void setId(long id){
         //.. check
@@ -73,6 +77,7 @@ public class Employee {
         setSname(sname);
         setManager(employee);
         System.out.println("+++ ctor2: " + this);
+        count++;
     }
 
     String getEmployeeInfo(){
