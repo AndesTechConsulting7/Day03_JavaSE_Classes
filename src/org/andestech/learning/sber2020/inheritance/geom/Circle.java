@@ -22,7 +22,7 @@ public class Circle extends Figure {
     @Override
     public void moveTo(Point p1) {
           //....
-        System.out.printf("Circle move from %s to %s.", getPoint(),p1);
+        System.out.printf("Circle move from %s to %s.\n", getPoint(),p1);
          // алгоритм по перемещению.
         setPoint(p1);
 
@@ -30,6 +30,6 @@ public class Circle extends Figure {
 
     @Override
     public void rotateOn(int angle) {
-        System.out.printf("Circle rotate on %d degree.", angle);
+        System.out.printf("Circle rotate on %d degree.\n", angle);
     }
 }
