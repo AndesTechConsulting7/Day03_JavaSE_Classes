@@ -25,11 +25,20 @@ public class Employee {
         this.id = id;
     }
 
+    // Aaaaaa Bbbbbb
+     private String normalizeName(String n){
+     n = n.trim();
+     String s1 = n.substring(0,1).toUpperCase();
+     String s2 = n.substring(1).toLowerCase();
+     return s1+s2;
+        // return n.trim().toUpperCase();
+    }
+
     public String getName(){return name;}
-    public void setName(String name){ this.name = name.trim().toUpperCase();}
+    public void setName(String name){ this.name = normalizeName(name);}
 
     public String getSname() {  return sname; }
-    public void setSname(String sname) { this.sname = sname.trim().toUpperCase(); }
+    public void setSname(String sname) { this.sname = normalizeName(sname); }
 
     public Employee getManager() { return manager; }
     public void setManager(Employee manager) {
