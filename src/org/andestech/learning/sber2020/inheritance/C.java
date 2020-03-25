@@ -1,4 +1,4 @@
-package org.andestech.learning.sber2020.enheritance;
+package org.andestech.learning.sber2020.inheritance;
 
 public class C extends B {
 

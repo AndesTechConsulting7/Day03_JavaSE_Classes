@@ -1,6 +1,6 @@
 package org.andestech.learning.sber2020;
 
-import org.andestech.learning.sber2020.enheritance.B;
+import org.andestech.learning.sber2020.inheritance.B;
 
 public class Main {
 
