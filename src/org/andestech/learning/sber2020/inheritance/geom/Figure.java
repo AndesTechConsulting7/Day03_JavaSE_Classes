@@ -1,6 +1,6 @@
 package org.andestech.learning.sber2020.inheritance.geom;
 
-public abstract class Figure {
+public abstract class Figure implements IMovable {
 
     protected Color color;
     private Point point;
@@ -9,7 +9,7 @@ public abstract class Figure {
     public abstract double getSquare();
     public abstract double getPerimeter();
 
-    public abstract void moveTo(Point p1);
+    //public abstract void moveTo(Point p1);
     // rotate
 
     public Color getColor() { return color;   }

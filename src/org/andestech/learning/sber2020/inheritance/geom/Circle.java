@@ -27,4 +27,9 @@ public class Circle extends Figure {
         setPoint(p1);
 
     }
+
+    @Override
+    public void rotateOn(int angle) {
+        System.out.printf("Circle rotate on %d degree.", angle);
+    }
 }
