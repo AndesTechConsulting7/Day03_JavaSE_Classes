@@ -1,6 +1,8 @@
 package org.andestech.learning.sber2020;
 import java.util.Random;
 
+import org.andestech.learning.sber2020.utils.ABSUtils;
+
 /**
  * ABS test
  * Employee class
@@ -11,7 +13,7 @@ import java.util.Random;
  * </ul>
  *
  * @author Andrei
- * @version 1.0.2
+ * @version 1.0.3
  */
 public class Employee {
     private long id;
@@ -20,7 +22,13 @@ public class Employee {
     private Employee manager= null;
 
     private static int count = 0;
-    public final static String ORGANISATION = "SBER";
+    public final static String ORGANISATION;
+
+    static {
+        //...
+        System.out.println("+++ static init!");
+        ORGANISATION = "SBER";
+    }
 
     public static int getCount(){return count;}
     public long getId(){return id;}
@@ -30,19 +38,21 @@ public class Employee {
     }
 
     // Aaaaaa Bbbbbb
-     private String normalizeName(String n){
-     n = n.trim();
-     String s1 = n.substring(0,1).toUpperCase();
-     String s2 = n.substring(1).toLowerCase();
-     return s1+s2;
-        // return n.trim().toUpperCase();
-    }
+//     private String normalizeName(String n){
+//     n = n.trim();
+//     String s1 = n.substring(0,1).toUpperCase();
+//     String s2 = n.substring(1).toLowerCase();
+//     return s1+s2;
+//        // return n.trim().toUpperCase();
+//    }
 
     public String getName(){return name;}
-    public void setName(String name){ this.name = normalizeName(name);}
+   // public void setName(String name){ this.name = normalizeName(name);}
+   public void setName(String name){ this.name = ABSUtils.normalizeName(name);}
 
     public String getSname() {  return sname; }
-    public void setSname(String sname) { this.sname = normalizeName(sname); }
+   //  public void setSname(String sname) { this.sname = normalizeName(sname); }
+   public void setSname(String sname) { this.sname = ABSUtils.normalizeName(sname); }
 
     public Employee getManager() { return manager; }
     public void setManager(Employee manager) {
