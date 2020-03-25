@@ -5,15 +5,12 @@ import org.andestech.learning.sber2020.inheritance.geom.*;
 
 public class Main {
 
-    private static void moveToEdgeX(IMovable figure){
+    private static void drawStar(IMovable figure){
         //......
         figure.moveTo(Point.EDGE_X);
         figure.rotateOn(20);
         figure.moveTo(Point.EDGE_Y);
-
-
-
-
+        //....
 
     }
 
@@ -27,7 +24,12 @@ public class Main {
         Circle c1 = new Circle(1, Color.White, new Point(0,2));
         c1.moveTo(new Point(5,3));
 
-        moveToEdgeX(c1);
+        drawStar(c1);
+
+        Object o3 = b1;
+
+        Object o2 = new Circle(1, Color.Green, new Point(10,20));
+        System.out.printf("\nS=%f, P=%f.", ((Circle)o2).getSquare(), ((Circle)o2).getPerimeter());
 
 
 
