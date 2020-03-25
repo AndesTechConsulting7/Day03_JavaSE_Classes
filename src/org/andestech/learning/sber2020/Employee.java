@@ -20,6 +20,10 @@ public class Employee {
     private Employee manager= null;
 
     public long getId(){return id;}
+    private void setId(long id){
+        //.. check
+        this.id = id;
+    }
 
     public String getName(){return name;}
     public void setName(String name){ this.name = name.trim().toUpperCase();}
@@ -47,7 +51,7 @@ public class Employee {
 
     public Employee(String name, String sname, Employee employee){
         this(0,name,sname,employee);
-        id = generateId();
+        setId(generateId());
     }
 
     public Employee(int id, String name, String sname){
@@ -55,9 +59,9 @@ public class Employee {
     }
 
     public Employee(int id, String name, String sname, Employee employee){
-         this.id = id;
-         this.name = name;
-        this.setSname(sname);
+        setId(id);
+        setName(name);
+        setSname(sname);
         setManager(employee);
         System.out.println("+++ ctor2: " + this);
     }
