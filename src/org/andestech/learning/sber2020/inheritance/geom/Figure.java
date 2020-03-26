@@ -3,6 +3,7 @@ package org.andestech.learning.sber2020.inheritance.geom;
 public abstract class Figure implements IMovable {
 
     protected Color color;
+
     private Point point;
     public Figure(Color color, Point point){this.color = color; setPoint(point);}
 

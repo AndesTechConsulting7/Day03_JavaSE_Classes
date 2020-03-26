@@ -22,9 +22,12 @@ public class Main {
         // Геометрия
 
         Circle c1 = new Circle(1, Color.White, new Point(0,2));
+        Rectangle r1 = new Rectangle(2,4,Color.Grey, new Point(2, 5));
+
         c1.moveTo(new Point(5,3));
 
         drawStar(c1);
+        drawStar(r1);
 
         Object o3 = b1;
 
