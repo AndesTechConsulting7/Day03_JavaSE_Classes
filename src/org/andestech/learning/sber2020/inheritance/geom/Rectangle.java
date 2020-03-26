@@ -11,12 +11,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public final double getSquare() {
         return a*b;
     }
 
     @Override
-    public double getPerimeter() {
+    public final double getPerimeter() {
         return 2*(a+b);
     }
 

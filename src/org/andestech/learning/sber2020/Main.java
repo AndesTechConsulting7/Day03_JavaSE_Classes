@@ -3,11 +3,13 @@ package org.andestech.learning.sber2020;
 import org.andestech.learning.sber2020.inheritance.B;
 import org.andestech.learning.sber2020.inheritance.geom.*;
 
+//class SuperCircle extends Circle{   }
+
 public class Main {
 
     private static void drawStar(IMovable figure){
         //......
-        figure.moveTo(Point.EDGE_X);
+        figure.moveTo(new Point(Point.EDGE_X.getX()/2, Point.EDGE_Y.getY()/2));
         figure.rotateOn(20);
         figure.moveTo(Point.EDGE_Y);
         //....

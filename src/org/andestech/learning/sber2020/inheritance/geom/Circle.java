@@ -1,6 +1,6 @@
 package org.andestech.learning.sber2020.inheritance.geom;
 
-public class Circle extends Figure {
+public final class Circle extends Figure {
 
     private double r;
 
